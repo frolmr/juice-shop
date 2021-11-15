@@ -261,8 +261,8 @@ jobs:
         uses: akhileshns/heroku-deploy@79ef2ae4ff9b897010907016b268fd0f88561820 #v3.12.12
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: ${{ env.HEROKU_APP }}
-          heroku_email: bjoern.kimminich@owasp.org
+          heroku_app_name: "hackeru-juice-shop"
+          heroku_email: frol.mr@ya.ru
           branch: ${{ env.HEROKU_BRANCH }}
   notify-slack:
     if: github.repository == 'juice-shop/juice-shop' && github.event_name == 'push' && (success() || failure())
